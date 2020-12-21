@@ -1,3 +1,22 @@
+/*
+Implementasikan function deepSum untuk mendapatkan jumlah pertambahan dari
+angka-angka yang terdapat di dalam array
+
+Contoh array:
+[
+  [
+    [1, 2, 3],
+    [1, 2, 3]
+  ],
+  [
+    [1, 2, 3],
+    [1, 2],
+    [1]
+  ]
+]
+Maka akan menghasilkan output: 22
+*/
+
 function deepSum (arr) {
   // Code disini
 }
