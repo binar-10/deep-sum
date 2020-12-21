@@ -6,7 +6,20 @@
 
 function digitPerkalianMinimum(angka) {
   // you can only write your code here!
+    var MultiplicationCheck = [];
+        for(let i = 0; i <= angka; i++) {
+            for(let a = 0; a <= angka; a++){
+            if(i * a === angka) {
+               var hasil = ["" + i + a];
+               MultiplicationCheck.push(hasil)
+            }
+        }
+    }
+    var kecil = MultiplicationCheck.sort((a, b) => a - b);
+    var final = kecil[0];
+    return final.toString().length;
 }
+
 
 // TEST CASES
 console.log(digitPerkalianMinimum(24)); // 2
