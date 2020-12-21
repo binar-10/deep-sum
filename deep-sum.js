@@ -1,30 +1,18 @@
-/*
-Implementasikan function deepSum untuk mendapatkan jumlah pertambahan dari
-angka-angka yang terdapat di dalam array
-
-Contoh array:
-[
-  [
-    [1, 2, 3],
-    [1, 2, 3]
-  ],
-  [
-    [1, 2, 3],
-    [1, 2],
-    [1]
-  ]
-]
-Maka akan menghasilkan output: 22
-*/
-
 function deepSum (arr) {
   // Code disini
+  
+  const total = arr.reduce((accumulator,currentValue) => {
+    // if currentValue still array, then callback deepSum with currentValue
+    // but if that's not array,then add currentValue to accumulator (recursive)
+    return accumulator + (Array.isArray(currentValue) ? deepSum(currentValue) : currentValue);
+  },0);
+  return total;
 }
 
 //TEST CASE
 console.log(deepSum([
   [
-    [4, 5, 6],
+    [4,5,6],
     [9, 1, 2, 10],
     [9, 4, 3]
   ],

@@ -6,6 +6,20 @@
 
 function digitPerkalianMinimum(angka) {
   // you can only write your code here!
+  let minimum = angka * 2;
+
+  for (let i = 1; i <= angka; i++) {
+    if (angka % i == 0){
+      let j = angka / i;
+      let digit = `${i}${j}`.length;
+      if(digit < minimum){
+        minimum = digit;
+      }
+    } 
+    
+  }
+  return minimum;
+  
 }
 
 // TEST CASES
