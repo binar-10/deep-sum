@@ -4,9 +4,25 @@
 //  Dari antara faktor tersebut, yang digit nya paling sedikit adalah 3 * 8 atau 4 * 6,
 //  sehingga function akan me-return 2.
 
-function digitPerkalianMinimum(angka) {
-  // you can only write your code here!
+ function digitPerkalianMinimum(angka) {
+  var check = [];
+  for (let i = 0; i <= angka; i++)
+    {
+      for (let a = 0; a <= angka; a++) {
+        if (i * a === angka) {
+          var j = '' + i;
+          var k = j.length;
+          var b = '' + a;
+          var c = b.length;
+          var res = k + c;
+          check.push(res);
+        }
+      }
+    }
+    var arr = check.sort();
+    return arr[0];
 }
+
 
 // TEST CASES
 console.log(digitPerkalianMinimum(24)); // 2

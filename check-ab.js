@@ -5,7 +5,42 @@
 
 function checkAB(num) {
   // you can only write your code here!
+
+  let a = num.search("a"&&" "&&"b");
+  let b = num.search("b"&&"a"&&"b");
+
+  if (a >= 1){
+    console.log("true");
+  }else if (b >= 2){
+    console.log("true");
+  }else {
+    console.log("false");
+  }
+
+ return;
+
+  // const ab = ['a', 'b'];
+  // var n = num.length;
+  // var arr = [];
+
+  // //for (let i = 0; i < n; i+3) {
+  //   do {
+  //     var i = 0
+  //     var j = 0;
+  //     var k = 3;
+  //     let s = num.slice(j, k);
+  //     arr.push(s);
+  //     i+3;
+  //     j+3;
+  //     k+3; 
+  //   } while (i <= n);
+    
+  // //}
+
+  // return arr;
 }
+
+
 
 // TEST CASES
 console.log(checkAB('lane borrowed')); // true
