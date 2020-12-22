@@ -5,6 +5,18 @@
 
 function checkAB(num) {
   // you can only write your code here!
+  let checkAb = ""
+  for(let i = 0; i<num.length; i++) {
+    if(num[i]=="a"||num[i]=="b") {
+      checkAb += num[i]
+    }
+  }
+  if(checkAb === "ab") {
+    return true
+  } else {
+    return false
+  }
+  // console.log(checkAb)
 }
 
 // TEST CASES
