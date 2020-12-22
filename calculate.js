@@ -5,7 +5,19 @@
 //  sehingga function akan me-return 2.
 
 function digitPerkalianMinimum(angka) {
-  // you can only write your code here!
+  const divider = [...Array(angka+1).keys()]; //array [0...angka] as a divider
+  const moduloDivider = [];
+  divider.map(pembagi => {
+    if (angka % pembagi === 0) { // modulo function
+      return moduloDivider.push(pembagi);
+    }
+  });
+  const reversed = moduloDivider.slice().reverse(); //reversing modulo array
+  const outputs = moduloDivider.map((value, index) => [value, reversed[index]]).map(output => { //join 2 arrays then join each elements
+    return output.join("").length;
+  });
+  const minPoint = Math.min.apply(Math, outputs); // looking for the min point
+  return minPoint;
 }
 
 // TEST CASES
