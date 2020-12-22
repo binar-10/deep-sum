@@ -4,9 +4,53 @@
 //  Dari antara faktor tersebut, yang digit nya paling sedikit adalah 3 * 8 atau 4 * 6,
 //  sehingga function akan me-return 2.
 
-function digitPerkalianMinimum(angka) {
-  // you can only write your code here!
-}
+
+const digitPerkalianMinimum =(angka) =>{
+    let jml = [];
+    for (i = 0; i <= angka; i++)
+      {
+        for (j = 0; j <= angka; j++) {
+          if (i * j === angka) {
+            let k = '' + i;
+            let l = k.length;
+            let b = '' + j;
+            let c = b.length;
+            let hasil = l + c;
+            jml.push(hasil);
+          }
+        }
+      }
+      let fnl =jml.sort();
+      return fnl[0];
+  }
+
+  /*const digitPerkalianMinimum =(angka) =>{
+    let jml=[];
+    
+    for(i=0; i <= angka;i++){
+        for(j=0; j<=angka; j++){
+        if((i*j) === angka){
+            let hasil=(""+i+j);
+            jml.push(hasil);
+            }
+        }
+        }
+
+        let str = jml.toString();
+        let splt = str.split(",");
+        splt.length;
+        
+        
+        
+        
+        //return str.split(",");
+        //return splt.min;
+       
+   
+  
+  }
+  *\
+
 
 // TEST CASES
 console.log(digitPerkalianMinimum(24)); // 2
