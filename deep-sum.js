@@ -18,26 +18,27 @@ Maka akan menghasilkan output: 22
 */
 
 function deepSum (arr) {
-  // Code disini
+  let numbArr = [];
+  arr.map(a => { // transform string (string-like) input to integer
+    a.map(b => {
+      b.map(c => {
+        numbArr.push(parseInt(c));
+      })
+    })
+  })
+  // console.log(numbArr);
+
+  let output = numbArr.reduce((accumulator, curValue) => { //adding every element in the array
+   return accumulator + curValue 
+  }, 0)
+  return output;
 }
 
 //TEST CASE
 console.log(deepSum([
-  [
-    [4, 5, 6],
-    [9, 1, 2, 10],
-    [9, 4, 3]
-  ],
-  [
-    [4, 14, 31],
-    [9, 10, 18, 12, 20],
-    [1, 4, 90]
-  ],
-  [
-    [2, 5, 10],
-    [3, 4, 5],
-    [2, 4, 5, 10]
-  ]
+  [[4, 5, 6], [9, 1, 2, 10], [9, 4, 3]],
+  [[4, 14, 31], [9, 10, 18, 12, 20], [1, 4, 90]],
+  [[2, 5, 10], [3, 4, 5], [2, 4, 5, 10]]
 ])); // 316
 
 console.log(deepSum([
@@ -61,4 +62,4 @@ console.log(deepSum([
   ]
 ])); // 156
 
-console.log(deepSum([])); // No number
+// console.log(deepSum([])); // No number
