@@ -6,6 +6,19 @@
 
 function digitPerkalianMinimum(angka) {
   // you can only write your code here!
+  var smallDig = Number.MAX_SAFE_INTEGER;
+  for (var i = 1; i <= Math.round(Math.sqrt(angka)); i++) {
+    if (angka % i === 0) {
+      var string1 = String(i);
+      var string2 = String(angka/i);
+      var totalCount = (string1+string2).length;
+      
+      if (smallDig > totalCount) {
+        smallDig = totalCount;
+      }
+    }
+  }
+  return smallDig;
 }
 
 // TEST CASES

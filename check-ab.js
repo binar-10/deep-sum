@@ -5,6 +5,26 @@
 
 function checkAB(num) {
   // you can only write your code here!
+  let locStr = [[], []];
+  for (let i = 0; i <= num.length; i++) {
+    if (num[i] === 'a') {
+      locStr[0].push(i);
+    }
+    if (num[i] === 'b') {
+      locStr[1].push(i);
+    }
+  }
+  console.log(locStr);
+
+  let find = false;
+  for (i = 0; i <= locStr[0].length && !find; i++) {
+    for (let j = 0; j <= locStr[1].length && !find; j++) {
+      if (Math.abs(locStr[0][i] - locStr[1][j]) === 4) {
+        find = true;
+      }
+    }
+  }
+  return find;
 }
 
 // TEST CASES
