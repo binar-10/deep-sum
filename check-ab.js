@@ -5,6 +5,18 @@
 
 function checkAB(num) {
   // you can only write your code here!
+  // find a,b or b,a
+  const indexA = num.indexOf('a');
+  const indexB = num.indexOf('b');
+
+  // const indexCoba = num.charAt(indexA + 4);
+
+  if(indexA != -1 && indexB != -1 ){
+    return num.charAt(indexA + 4) == 'b' || num.charAt(indexB + 4) == 'a'
+  }else{
+    return false;
+  }
+  // return indexCoba;
 }
 
 // TEST CASES
