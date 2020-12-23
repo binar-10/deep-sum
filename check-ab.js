@@ -5,6 +5,14 @@
 
 function checkAB(num) {
   // you can only write your code here!
+  
+    var arr = [];
+    arr = str.split("");
+        if ((arr.indexOf("a") - arr.indexOf("b")) == -3) {
+            return true;
+        } else {
+            return false;
+        } 
 }
 
 // TEST CASES
