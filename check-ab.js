@@ -4,19 +4,16 @@
 // Jika tidak ditemukan sama sekali, kembalikan nilai false. Jarak bisa dari a ke b, atau b ke a.
 
 function checkAB(num) {
-  // you can only write your code here!
-  let checkAb = ""
+  let isTrue = false
   for(let i = 0; i<num.length; i++) {
-    if(num[i]=="a"||num[i]=="b") {
-      checkAb += num[i]
+    if(num[i] == "a" || num[i] =="b") {
+      if((num[i] === "a" && num[i+4] === "b") || (num[i] === "b" && num[i+4] === "a")) {
+        isTrue = true
+        return true
+      }
     }
   }
-  if(checkAb === "ab") {
-    return true
-  } else {
-    return false
-  }
-  // console.log(checkAb)
+  return isTrue
 }
 
 // TEST CASES
@@ -25,3 +22,4 @@ console.log(checkAB('i am sick')); // false
 console.log(checkAB('you are boring')); // true
 console.log(checkAB('barbarian')); // true
 console.log(checkAB('bacon and meat')); // false
+console.log(checkAB('ab asddb')); // true
