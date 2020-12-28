@@ -6,7 +6,42 @@
 
 function digitPerkalianMinimum(angka) {
   // you can only write your code here!
+  let check = []
+  let result
+  for(let i =1; i<=angka; i++) {
+    for(let j = 1; j<=angka;j++) {
+      if(i * j === angka) {
+        // console.log(i, j)
+        check.push([`${i}${j}`])
+      }
+    }
+  }
+  
+  for(let x = 0; x<check.length; x++) {
+    check[x].sort()
+  }
+  // console.log(check, "aaaa")
+  
+  
+  // console.log(removeDups(check))
+  result = removeDups(check)
+
+  return result[0].length
+  
 }
+
+function removeDups(data) {
+  let unique = {};
+  data.forEach(function(i) {
+    if(!unique[i]) {
+      unique[i] = true;
+    }
+  });
+  return Object.keys(unique);
+}
+
+
+
 
 // TEST CASES
 console.log(digitPerkalianMinimum(24)); // 2
