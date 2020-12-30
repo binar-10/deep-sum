@@ -18,6 +18,7 @@ function digitPerkalianMinimum(angka) {
     var kecil = MultiplicationCheck.sort((a, b) => a - b);
     var final = kecil[0];
     return final.toString().length;
+
 }
 
 
