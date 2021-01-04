@@ -19,6 +19,19 @@ Maka akan menghasilkan output: 22
 
 function deepSum (arr) {
   // Code disini
+  let output = 0;
+  for(let i = 0; i < arr.length; i++){
+      for(let j = 0; j < arr[i].length; j++){
+          for(let k = 0; k < arr[i][j].length ; k++){
+              output += arr[i][j][k];
+          }
+      }
+  }
+  if (output == 0) {
+      return 'No number'
+  } else {
+      return output
+  }
 }
 
 //TEST CASE

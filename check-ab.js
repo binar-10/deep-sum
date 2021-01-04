@@ -27,7 +27,7 @@ function checkAB(num) {
     } else if(ABDistance[huruf] == 'b'){
       //jika setelah huruf b termasuk dihitung dalam 4 huruf berderet terdapat huruf a
       if (ABDistance[huruf+4] == 'a'){
-        //kembalikan nilai true
+        //kembalikan nilai t
         return true
       }
     }
