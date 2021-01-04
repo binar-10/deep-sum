@@ -5,7 +5,20 @@
 
 function checkAB(str) {
   // you can only write your code here!
-    
+    str.split("");
+    let hurufA = str.indexOf('a');
+    let hurufB = str.indexOf('b');
+    let jarak = hurufB - hurufA || hurufA - hurufB;
+
+    if (jarak >= 3) {
+      let hasil = 'true'
+      return hasil;
+    } else
+    if (jarak < 3) {
+      let hasil = 'false' 
+      return hasil;
+    }
+        
 }
 
 // TEST CASES
