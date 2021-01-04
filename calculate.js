@@ -6,6 +6,18 @@
 
 function digitPerkalianMinimum(angka) {
   // you can only write your code here!
+  var perkalianCheck = [];
+    for (let i = 0; i <= angka; i++) {
+    for (let a = 0; a <= angka; a++) {
+         if (i * a === angka) {
+         var kali = ["" + i + a];
+         perkalianCheck.push(kali)
+        }
+       }
+      }
+    var minim = perkalianCheck.sort((a, b) => a - b);
+    var akhir = minim[0];
+    return akhir.toString().length;
 }
 
 // TEST CASES
